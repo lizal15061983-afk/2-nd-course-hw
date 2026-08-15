@@ -4,9 +4,212 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework1.</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Домашнее задание</h1>
+     <!-- ================= 1. ГЛАВНЫЙ ЭКРАН (ШАПКА) ================= -->
+    <header class="hero">
+        <div class="hero__card welcome-card">
+            <div class="welcome-card__content">
+                <h1 class="welcome-card__title">Добро пожаловать<br>на мой сайт мини-игр</h1>
+                <p class="welcome-card__text">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай «Поехали!» и приступай.</p>
+                <button class="welcome-card__btn">Поехали!</button>
+            </div>
+            <div class="welcome-card__image" style="background-image: url('./img/hero-bg.png');"></div>
+        </div>
+        <svg class="welcome-card__stars" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org">
+    <!-- Указываем currentColor, чтобы управлять цветом из CSS через свойство color -->
+    <path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor" />
+</svg>
+    </div>
+
+        <!-- БЕГУЩАЯ СТРОКА С НАЗВАНИЯМИ ИГР -->
+        <div class="hero__marquee marquee">
+            <div class="marquee__inner">
+                <!-- Оригинальный ряд -->
+                <div class="marquee__line">
+                    <span>УГАДАЙ ЧИСЛО</span> • <span>ПРОСТАЯ АРИФМЕТИКА</span> • <span>ПЕРЕВЕРНИ ТЕКСТ</span> • 
+                    <span>КАМЕНЬ, НОЖНИЦЫ, БУМАГА</span> • <span>ПРОСТАЯ ВИКТОРИНА</span> • <span>ГЕНЕРАТОР ЦВЕТОВ</span> •
+                </div>
+                <!-- Копия ряда для эффекта бесконечной прокрутки -->
+                <div class="marquee__line" aria-hidden="true">
+                    <span>УГАДАЙ ЧИСЛО</span> • <span>ПРОСТАЯ АРИФМЕТИКА</span> • <span>ПЕРЕВЕРНИ ТЕКСТ</span> • 
+                    <span>КАМЕНЬ, НОЖНИЦЫ, БУМАГА</span> • <span>ПРОСТАЯ ВИКТОРИНА</span> • <span>ГЕНЕРАТОР ЦВЕТОВ</span> •
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="content">
+        <!-- ================= 2. СЕКЦИЯ: ОБ ИГРАХ (ПРЕВЬЮ) ================= -->
+        <section class="games-about">
+            <h2 class="games-about__title">Об играх</h2>
+            <p class="games-about__subtitle">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может выиграть каждый. Все игры доступны для пользователя.</p>
+            
+            <!-- Сетка маленьких вертикальных карточек -->
+            <div class="games-about__container">
+                
+                <!-- Карточка 1 -->
+                <a href="#game-guess" class="games-about__card-link">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/guess.png');"></div>
+                        <div class="game-card__info">
+                            <div class="game-card__number">Игра №1</div>
+                            <h3 class="game-card__title">Угадай число</h3>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Карточка 2 -->
+                <a href="#game-math" class="games-about__card-link">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/math.png');"></div>
+                        <div class="game-card__info">
+                            <div class="game-card__number">Игра №2</div>
+                            <h3 class="game-card__title">Простая арифметика</h3>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Карточка 3 -->
+                <a href="#game-reverse" class="games-about__card-link">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/reverse.png');"></div>
+                        <div class="game-card__info">
+                            <div class="game-card__number">Игра №3</div>
+                            <h3 class="game-card__title">Переверни текст</h3>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Карточка 4 -->
+                <a href="#game-rps" class="games-about__card-link">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/rps.png');"></div>
+                        <div class="game-card__info">
+                            <div class="game-card__number">Игра №4</div>
+                            <h3 class="game-card__title">Камень, ножницы, бумага</h3>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Карточка 5 -->
+                <a href="#game-quiz" class="games-about__card-link">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/quiz.png');"></div>
+                        <div class="game-card__info">
+                            <div class="game-card__number">Игра №5</div>
+                            <h3 class="game-card__title">Простая викторина</h3>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Карточка 6 -->
+                <a href="#game-color" class="games-about__card-link">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/color.png');"></div>
+                        <div class="game-card__info">
+                            <div class="game-card__number">Игра №6</div>
+                            <h3 class="game-card__title">Генератор случайных цветов</h3>
+                        </div>
+                    </article>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- ================= 3. СЕКЦИЯ: МИНИ-ИГРЫ (ПОЛНЫЕ) ================= -->
+        <section class="games-list">
+            <h2 class="games-list__title">Мини-игры</h2>
+            
+            <!-- Сетка больших горизонтальных карточек с кнопками -->
+            <div class="games-list__container">
+                
+                <!-- Полная карточка 1 -->
+                <a href="#" class="games-list__card-link" id="game-guess">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/guess.png');"></div>
+                        <div class="game-card__info">
+                            <h3 class="game-card__title">Угадай число</h3>
+                            <p class="game-card__text">Попробуй угадать случайное число от 1 до 100.</p>
+                            <span class="game-card__btn">Играть!</span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Полная карточка 2 -->
+                <a href="#" class="games-list__card-link" id="game-math">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/math.png');"></div>
+                        <div class="game-card__info">
+                            <h3 class="game-card__title">Простая арифметика</h3>
+                            <p class="game-card__text">Попробуй решить простые арифметические задачи.</p>
+                            <span class="game-card__btn">Играть!</span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Полная карточка 3 -->
+                <a href="#" class="games-list__card-link" id="game-reverse">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/reverse.png');"></div>
+                        <div class="game-card__info">
+                            <h3 class="game-card__title">Переверни текст</h3>
+                            <p class="game-card__text">Попробуй ввести текст, который будет перевёрнут.</p>
+                            <span class="game-card__btn">Играть!</span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Полная карточка 4 -->
+                <a href="#" class="games-list__card-link" id="game-rps">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/rps.png');"></div>
+                        <div class="game-card__info">
+                            <h3 class="game-card__title">Камень, ножницы, бумага</h3>
+                            <p class="game-card__text">Сыграй в популярную игру против компьютера.</p>
+                            <span class="game-card__btn">Играть!</span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Полная карточка 5 -->
+                <a href="#" class="games-list__card-link" id="game-quiz">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/quiz.png');"></div>
+                        <div class="game-card__info">
+                            <h3 class="game-card__title">Простая викторина</h3>
+                            <p class="game-card__text">Ответь на вопросы викторины с вариантами ответов.</p>
+                            <span class="game-card__btn">Играть!</span>
+                        </div>
+                    </article>
+                </a>
+
+                <!-- Полная карточка 6 -->
+                <a href="#" class="games-list__card-link" id="game-color">
+                    <article class="game-card">
+                        <div class="game-card__image" style="background-image: url('./img/color.png');"></div>
+                        <div class="game-card__info">
+                            <h3 class="game-card__title">Генератор случайных цветов</h3>
+                            <p class="game-card__text">Кликай и генерируй случайные цвета фона страницы.</p>
+                            <span class="game-card__btn">Играть!</span>
+                        </div>
+                    </article>
+                </a>
+
+            </div>
+        </section>
+    </main>
+        <!-- ================= 4. ПОДВАЛ САЙТА (FOOTER) ================= -->
+    <footer class="footer">
+        <p class="footer__text">Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
+
   </body>
 </html>
+<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="#202027"/>
+</svg>
