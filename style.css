@@ -73,22 +73,24 @@ body {
   background-color: #202027;
   border-radius: 60px;
   border: 1px solid #202027;
-  padding: 16px 28px;
+  padding: 16px 65px;
   font-size: 24px;
+  line-height: 124%;
   font-weight: 600;
-  line-height: 142%;
   color: wheat;
+  text-decoration: none;
 
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
   margin-top: 48px;
 }
 .welcome-card__btn:hover {
-  background-color: #3b3b46;
-  border-color: #3b3b46;
+  background-color: wheat;
+  border-color: black;
+  color: #000;
 }
 
 .welcome-card__image {
@@ -245,7 +247,7 @@ body {
 
 .games-list__container {
   display: grid;
-  grid-template-columns: 1fr; /* Большие карточки идут строго друг под другом по одной */
+  grid-template-columns: 1fr;
   gap: 32px;
   margin-top: 72px;
 }
@@ -262,8 +264,7 @@ body {
 .game-card {
   display: flex;
   flex-direction: column; /* По умолчанию карточка вертикальная (для первой секции) */
-  background-color: #ffffff; /* Белый фон из макета */
-  border-radius: 30px;
+  background-color: #ffffff;
   overflow: hidden;
   width: 100%;
   transition:
@@ -318,8 +319,9 @@ body {
 
 /* Эффект наведения (Hover) на маленькие карточки */
 .games-about__card-link:hover .game-card {
-  transform: translateY(-5px);
+  transform: scale(1.05);
   box-shadow: 0px 8px 25px rgba(138, 43, 226, 0.4);
+  /*transition: transform 0.3s ease, box-shadow 0.3 ease;*/
 }
 
 /* ================= 7. ПЕРЕСТРОЕНИЕ КАРТОЧКИ ДЛЯ ВТОРОЙ СЕКЦИИ ================= */
@@ -375,7 +377,7 @@ body {
 .game-card__btn {
   display: inline-block;
   padding: 16px 75px;
-  background-color: #1c1c1e;
+  background-color: #202027;
   color: #ffffff;
   font-size: 24px;
   line-height: 142%;
@@ -388,13 +390,15 @@ body {
 }
 
 /* Эффект наведения на большую карточку и кнопку */
-.games-list__card-link:hover .game-card {
+/*.games-list__card-link:hover  {
   transform: translateY(-8px);
   box-shadow: 0px 12px 30px rgba(138, 43, 226, 0.6);
-}
+}*/
 
-.games-list__card-link:hover .game-card__btn {
-  background-color: #8a2be2; /* Кнопка загорается неоном при наведении на карточку */
+.game-card__btn:hover {
+  background-color: rgb(248, 247, 244);
+  color: #000000;
+  outline: 1px solid black;
 }
 
 /* ================= 8. ПОДВАЛ САЙТА (FOOTER) ================= */
@@ -415,6 +419,30 @@ body {
   font-weight: 600;
   /*max-width: 1440px;*/
   text-align: center;
+}
+.small-star {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+.small-star__1 {
+  margin-top: 143px;
+  margin-left: 1158px;
+  transform: rotate(-7deg);
+}
+.small-star__2 {
+  margin-top: 156px;
+  margin-left: 1176px;
+  transform: rotate(-5.45deg);
+  right: 45px;
+}
+.small-star__4 {
+  margin-top: 3454px;
+  margin-left: 1140px;
+}
+.small-star__3 {
+  margin-top: 3404px;
+  margin-left: 1200px;
 }
 @media (min-width: 1024px) {
   .games-about__container .game-card__max {
