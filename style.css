@@ -11,9 +11,17 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
-  background-color: #a09cac;
+  background-color: #a7a5ac;
   color: black;
   overflow-x: hidden; /* Защита от появления горизонтальной полосы прокрутки */
+}
+.wrapper {
+  background-color: #000000;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  min-height: 100vw;
 }
 .center {
   padding-left: calc(50% - 600px);
@@ -199,6 +207,13 @@ body {
   /* gap: 100px; /* Расстояние между секциями "Об играх" и "Мини-игры" */
   background-color: #000000;
 }
+.games-about__star-bg {
+  position: absolute;
+  z-index: 0;
+  margin-top: 78px;
+  margin-left: 880px;
+  transform: rotate(7deg);
+}
 
 /* Стили заголовков и подзаголовков секций */
 .games-about__title,
@@ -231,7 +246,7 @@ body {
 .games-list__container {
   display: grid;
   grid-template-columns: 1fr; /* Большие карточки идут строго друг под другом по одной */
-  gap: 40px;
+  gap: 32px;
   margin-top: 72px;
 }
 
@@ -278,8 +293,8 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
- padding-left: 32px;
- padding-right: 32px;
+  padding-left: 32px;
+  padding-right: 32px;
 }
 
 .game-card__number {
@@ -287,11 +302,10 @@ body {
   line-height: 110%;
   font-weight: 500;
   color: #000000;
-  background-color: #F7F7F7; /* Серая овальная плашка */
+  background-color: #f7f7f7; /* Серая овальная плашка */
   padding: 9px 16px;
   border-radius: 50px;
   margin-top: 32px;
- 
 }
 
 .game-card__title {
@@ -309,15 +323,28 @@ body {
 }
 
 /* ================= 7. ПЕРЕСТРОЕНИЕ КАРТОЧКИ ДЛЯ ВТОРОЙ СЕКЦИИ ================= */
-.games-list .game-card {
-  flex-direction: row-reverse; /* Магия: картинка справа, текст слева */
+
+/* Базовое состояние для ВСЕХ карточек */
+.games-list__card-link .game-card {
+  display: flex;
+  flex-direction: row-reverse; /* Картинка справа, текст слева */
   min-height: 500px;
+  /*gap: 48px;
+   margin-left: -2px;*/
+}
+
+/*Состояние только для ЧЕТНЫХ ссылок-карточек */
+.games-list__card-link:nth-child(even) .game-card {
+  flex-direction: row; /* Картинка слева, текст справа */
 }
 
 /* Настройки элементов внутри большой карточки */
 .games-list .game-card__image {
-  width: 50%;
-  height: auto; /* Картинка растягивается по высоте всей карточки */
+  /*width: 50%;*/
+  max-width: 600px;
+  height: auto;
+  margin-right: -6px;
+  margin-left: -6px;
 }
 
 .games-list .game-card__info {
@@ -325,9 +352,9 @@ body {
   padding-left: 48px;
   padding-right: 48px;
   margin-top: 48px;
- /* transform: translateY(-32px);*/
- justify-content: flex-start;
+  justify-content: flex-start;
 }
+
 .games-list .game-card__title {
   font-size: 48px;
   line-height: 100%;
@@ -372,18 +399,21 @@ body {
 
 /* ================= 8. ПОДВАЛ САЙТА (FOOTER) ================= */
 .footer {
+  max-width: 1440px;
   width: 100%;
-  background-color: #bfff00; /* Кислотно-салатовый цвет */
-  padding: 30px 20px;
+  background-color: #bded35;
+  height: 150px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
+  margin: 144px auto 0 auto;
 }
 
 .footer__text {
-  font-size: 16px;
+  font-size: 24px;
+  line-height: 100%;
   font-weight: 600;
-  max-width: 1440px;
+  /*max-width: 1440px;*/
   text-align: center;
 }
 @media (min-width: 1024px) {
