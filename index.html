@@ -4,54 +4,101 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Homework1.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <link rel="stylesheet" href="style.css" />
-  </head>
+</head>
   <body>
-     <!-- ================= 1. ГЛАВНЫЙ ЭКРАН (ШАПКА) ================= -->
-    <header class="hero">
-        <div class="hero__card welcome-card">
-            <div class="welcome-card__content">
-                <h1 class="welcome-card__title">Добро пожаловать<br>на мой сайт мини-игр</h1>
-                <p class="welcome-card__text">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай «Поехали!» и приступай.</p>
-                <button class="welcome-card__btn">Поехали!</button>
-            </div>
-            <div class="welcome-card__image" style="background-image: url('./img/hero-bg.png');"></div>
+    
+    <!-- ==================== 1. ГЛАВНЫЙ ЭКРАН (ШАПКА) ==================== -->
+<header class="hero">
+    <div class="hero__card welcome-card">
+        
+        <!-- Контентная левая часть с текстом -->
+        <div class="welcome-card__content">
+            <h1 class="welcome-card__title">Добро пожаловать на мой сайт мини-игр</h1>
+            <p class="welcome-card__text">Тебе предстоит пройти несколько увлекательных игр. Если готов, нажимай «Поехали!» и приступай</p>
+            <button class="welcome-card__btn">Поехали!</button>
         </div>
-        <svg class="welcome-card__stars" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org">
-    <!-- Указываем currentColor, чтобы управлять цветом из CSS через свойство color -->
-    <path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor" />
-</svg>
-    </div>
 
-        <!-- БЕГУЩАЯ СТРОКА С НАЗВАНИЯМИ ИГР -->
-        <div class="hero__marquee marquee">
-            <div class="marquee__inner">
-                <!-- Оригинальный ряд -->
-                <div class="marquee__line">
-                    <span>УГАДАЙ ЧИСЛО</span> • <span>ПРОСТАЯ АРИФМЕТИКА</span> • <span>ПЕРЕВЕРНИ ТЕКСТ</span> • 
-                    <span>КАМЕНЬ, НОЖНИЦЫ, БУМАГА</span> • <span>ПРОСТАЯ ВИКТОРИНА</span> • <span>ГЕНЕРАТОР ЦВЕТОВ</span> •
-                </div>
-                <!-- Копия ряда для эффекта бесконечной прокрутки -->
-                <div class="marquee__line" aria-hidden="true">
-                    <span>УГАДАЙ ЧИСЛО</span> • <span>ПРОСТАЯ АРИФМЕТИКА</span> • <span>ПЕРЕВЕРНИ ТЕКСТ</span> • 
-                    <span>КАМЕНЬ, НОЖНИЦЫ, БУМАГА</span> • <span>ПРОСТАЯ ВИКТОРИНА</span> • <span>ГЕНЕРАТОР ЦВЕТОВ</span> •
-                </div>
-            </div>
+        <!-- Большая звезда-вспышка (Ваш Star 1) — вынесена отдельно как независимый фон -->
+        <img class="welcome-card__image" src="./img/Star 1.png" alt="Большая звезда">
+
+        <!-- Невидимая обертка, которая запирает маленькие звездочки внутри зеленого поля -->
+        <div class="welcome-card__stars">
+            <img class="welcome-card__star welcome-card__star_2" src="./img/Star 2.png" alt="Декор">
+            <img class="welcome-card__star welcome-card__star_3" src="./img/Star 3.png" alt="Декор">
+            <img class="welcome-card__star welcome-card__star_4" src="./img/Star 4.png" alt="Декор">
+            <img class="welcome-card__star welcome-card__star_5" src="./img/Star 5.png" alt="Декор">
         </div>
-    </header>
+
+
+
+    <!-- БЕГУЩАЯ СТРОКА С НАЗВАНИЯМИ ИГР -->
+  <div class="hero__marquee marquee">
+    <div class="marquee__inner">
+        <!-- Оригинальный ряд -->
+        <div class="marquee__line">
+            <span>УГАДАЙ ЧИСЛО</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+            
+            <span>ПРОСТАЯ АРИФМЕТИКА</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+            
+            <span>ПЕРЕВЕРНИ ТЕКСТ</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+            
+            <span>КАМЕНЬ, НОЖНИЦЫ, БУМАГА</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+            
+            <span>ПРОСТАЯ ВИКТОРИНА</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+            
+            <span>ГЕНЕРАТОР ЦВЕТОВ</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+   
+        </div>
+        <!-- Копия ряда для эффекта бесконечной прокрутки -->
+        <div class="marquee__line" aria-hidden="true">
+            <span>УГАДАЙ ЧИСЛО</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+            
+            <span>ПРОСТАЯ АРИФМЕТИКА</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+            
+            <span>ПЕРЕВЕРНИ ТЕКСТ</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+            
+            <span>КАМЕНЬ, НОЖНИЦЫ, БУМАГА</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+            
+            <span>ПРОСТАЯ ВИКТОРИНА</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+            
+            <span>ГЕНЕРАТОР ЦВЕТОВ</span>
+            <svg class="marquee__star" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://w3.org"><path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="currentColor"/></svg>
+        </div>
+    </div>
+</div>
+</div>
+</header>
+
+   
 
     <main class="content">
         <!-- ================= 2. СЕКЦИЯ: ОБ ИГРАХ (ПРЕВЬЮ) ================= -->
-        <section class="games-about">
+        <section class="games-about center">
             <h2 class="games-about__title">Об играх</h2>
-            <p class="games-about__subtitle">В моей коллекции представлено 6 игр на разные темы. Игры несложные — в них может выиграть каждый. Все игры доступны для пользователя.</p>
+            <p class="games-about__subtitle">В моей коллекции представлено 6 игр на разные темы.<br>Игры несложные — в них может выиграть каждый.<br>Все игры доступны для пользователя.</p>
             
             <!-- Сетка маленьких вертикальных карточек -->
             <div class="games-about__container">
                 
                 <!-- Карточка 1 -->
                 <a href="#game-guess" class="games-about__card-link">
-                    <article class="game-card">
+                    <article class="game-card game-card__mini ">
                         <div class="game-card__image" style="background-image: url('./img/guess.png');"></div>
                         <div class="game-card__info">
                             <div class="game-card__number">Игра №1</div>
@@ -62,7 +109,7 @@
 
                 <!-- Карточка 2 -->
                 <a href="#game-math" class="games-about__card-link">
-                    <article class="game-card">
+                    <article class="game-card game-card__medium">
                         <div class="game-card__image" style="background-image: url('./img/math.png');"></div>
                         <div class="game-card__info">
                             <div class="game-card__number">Игра №2</div>
@@ -73,7 +120,7 @@
 
                 <!-- Карточка 3 -->
                 <a href="#game-reverse" class="games-about__card-link">
-                    <article class="game-card">
+                    <article class="game-card game-card__mini">
                         <div class="game-card__image" style="background-image: url('./img/reverse.png');"></div>
                         <div class="game-card__info">
                             <div class="game-card__number">Игра №3</div>
@@ -84,7 +131,7 @@
 
                 <!-- Карточка 4 -->
                 <a href="#game-rps" class="games-about__card-link">
-                    <article class="game-card">
+                    <article class="game-card game-card__max">
                         <div class="game-card__image" style="background-image: url('./img/rps.png');"></div>
                         <div class="game-card__info">
                             <div class="game-card__number">Игра №4</div>
@@ -95,7 +142,7 @@
 
                 <!-- Карточка 5 -->
                 <a href="#game-quiz" class="games-about__card-link">
-                    <article class="game-card">
+                    <article class="game-card game-card__medium">
                         <div class="game-card__image" style="background-image: url('./img/quiz.png');"></div>
                         <div class="game-card__info">
                             <div class="game-card__number">Игра №5</div>
@@ -106,7 +153,7 @@
 
                 <!-- Карточка 6 -->
                 <a href="#game-color" class="games-about__card-link">
-                    <article class="game-card">
+                    <article class="game-card game-card__max">
                         <div class="game-card__image" style="background-image: url('./img/color.png');"></div>
                         <div class="game-card__info">
                             <div class="game-card__number">Игра №6</div>
@@ -119,7 +166,7 @@
         </section>
 
         <!-- ================= 3. СЕКЦИЯ: МИНИ-ИГРЫ (ПОЛНЫЕ) ================= -->
-        <section class="games-list">
+        <section class="games-list center">
             <h2 class="games-list__title">Мини-игры</h2>
             
             <!-- Сетка больших горизонтальных карточек с кнопками -->
@@ -210,6 +257,4 @@
 
   </body>
 </html>
-<svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18 0L22.8616 13.1384L36 18L22.8616 22.8616L18 36L13.1384 22.8616L0 18L13.1384 13.1384L18 0Z" fill="#202027"/>
-</svg>
+
