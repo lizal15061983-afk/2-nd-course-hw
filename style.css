@@ -279,13 +279,13 @@ body {
     transform 0.3s ease,
     box-shadow 0.3s ease;
 }
-.game-card__mini {
+.game-card_mini {
   height: 473px;
 }
-.game-card__medium {
+.game-card_medium {
   height: 512px;
 }
-.game-card__max {
+.game-card_max {
   height: 551px;
 }
 
