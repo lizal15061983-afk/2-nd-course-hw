@@ -398,11 +398,7 @@ body {
     transform 0.2s ease;
 }
 
-/* Эффект наведения на большую карточку и кнопку */
-/*.games-list__card-link:hover  {
-  transform: translateY(-8px);
-  box-shadow: 0px 12px 30px rgba(138, 43, 226, 0.6);
-}*/
+
 
 .game-card__btn:hover {
   background-color: rgb(248, 247, 244);
@@ -435,6 +431,9 @@ body {
   pointer-events: none;
 }
 .star-decor__left-mini {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
   width: 31.339238597680133;
   height: 31.339238597680133;
   top: 1570px;
@@ -444,16 +443,21 @@ body {
   opacity: 1;
 }
 .star-decor__left-big {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
   width: 54.59828476423661;
   height: 54.59828476423661;
   top: 1622px;
   left: 40px;
   border-width: 1px;
-
   transform: rotate(-5.45deg);
   opacity: 1;
 }
 .star-decor__right-mini {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
   width: 35.14553881609929;
   height: 35.14553881609929;
   top: 2363px;
@@ -463,6 +467,9 @@ body {
   opacity: 1;
 }
 .star-decor__right-big {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
   width: 68.86170081657656;
   height: 68.86170081657656;
   top: 2396px;
@@ -472,6 +479,9 @@ body {
   opacity: 1;
 }
 .star-decor__bottom-mini {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
   width: 41;
   height: 41;
   top: 5684px;
@@ -480,6 +490,9 @@ body {
   opacity: 1;
 }
 .star-decor__bottom-big {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
   width: 69;
   height: 69;
   top: 5636px;
@@ -488,7 +501,7 @@ body {
   opacity: 1;
 }
 @media (min-width: 1024px) {
-  .games-about__container .game-card__max {
+  .games-about__container .game-card_max {
     margin-top: -39px;
   }
 }
