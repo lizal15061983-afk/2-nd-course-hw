@@ -21,7 +21,7 @@ body {
   width: 100%;
   margin: 0 auto;
   position: relative;
-  min-height: 100vw;
+  min-height: 100vh;
 }
 .center {
   padding-left: calc(50% - 600px);
@@ -30,8 +30,11 @@ body {
 /* ================= 2. ГЛАВНЫЙ ЭКРАН (HERO / WELCOME) ================= */
 .hero {
   width: 100%;
-  max-width: 1440px; /* Расширяем чердак до максимума по макету */
-  margin: 0 auto; /* Центрируем всю секцию на больших экранах */
+  max-width: 1440px;
+  padding-left: calc(50% - 720px);
+  padding-right: calc(50% - 720px);
+  /*margin: 0 auto;
+ position: relative;*/
 }
 
 .welcome-card {
@@ -163,6 +166,7 @@ body {
   padding-top: 27px;
   padding-bottom: 27px;
   margin-top: 40px;
+  z-index: 3;
 }
 .marquee__inner {
   display: flex;
@@ -171,6 +175,8 @@ body {
 }
 
 .marquee__line {
+  position: relative;
+  z-index: 2;
   display: flex;
   align-items: center;
   gap: 50px;
@@ -243,6 +249,7 @@ body {
   gap: 32px;
   margin-top: 72px;
   align-items: start;
+  overflow: hidden;
 }
 
 .games-list__container {
@@ -422,29 +429,63 @@ body {
   /*max-width: 1440px;*/
   text-align: center;
 }
-.small-star {
+.star-decor {
   position: absolute;
-  z-index: 0;
+  z-index: 10;
   pointer-events: none;
 }
-.small-star__1 {
-  margin-top: 143px;
-  margin-left: 1158px;
-  transform: rotate(-7deg);
-}
-.small-star__2 {
-  margin-top: 156px;
-  margin-left: 1176px;
+.star-decor__left-mini {
+  width: 31.339238597680133;
+  height: 31.339238597680133;
+  top: 1570px;
+  left: 25px;
+  border-width: 1px;
   transform: rotate(-5.45deg);
-  right: 45px;
+  opacity: 1;
 }
-.small-star__4 {
-  margin-top: 3454px;
-  margin-left: 1140px;
+.star-decor__left-big {
+  width: 54.59828476423661;
+  height: 54.59828476423661;
+  top: 1622px;
+  left: 40px;
+  border-width: 1px;
+
+  transform: rotate(-5.45deg);
+  opacity: 1;
 }
-.small-star__3 {
-  margin-top: 3404px;
-  margin-left: 1200px;
+.star-decor__right-mini {
+  width: 35.14553881609929;
+  height: 35.14553881609929;
+  top: 2363px;
+  left: 1277px;
+  border-width: 1px;
+  transform: rotate(-7.08deg);
+  opacity: 1;
+}
+.star-decor__right-big {
+  width: 68.86170081657656;
+  height: 68.86170081657656;
+  top: 2396px;
+  left: 1320px;
+  border-width: 1px;
+  transform: rotate(-5.45deg);
+  opacity: 1;
+}
+.star-decor__bottom-mini {
+  width: 41;
+  height: 41;
+  top: 5684px;
+  left: 1249px;
+  border-width: 1px;
+  opacity: 1;
+}
+.star-decor__bottom-big {
+  width: 69;
+  height: 69;
+  top: 5636px;
+  left: 1319px;
+  border-width: 1px;
+  opacity: 1;
 }
 @media (min-width: 1024px) {
   .games-about__container .game-card__max {
