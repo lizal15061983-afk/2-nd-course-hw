@@ -68,3 +68,27 @@ const user = {
  //Запрос имени пользователя
  let userName = prompt('Как ваше имя?');
  alert(`Привет, ${userName}!`);
+
+ //Дополнительное задание
+
+ //Просим пользователя загадать число
+  let secretNumber = Number(prompt(`Загадай любое число`));
+
+ //Удваиваем загаданное число
+ let step = secretNumber * 2;
+ alert(step);
+
+ //К удвоенному числу  прибавляем 10
+ let step2 = step + 10;
+ alert(step2);
+
+ //Полученное число делим на 2
+ let step3 = step2 / 2;
+ alert(step3);
+
+ //из результата вычитаем первоначальное число
+ let step4 = step3 - secretNumber;
+ alert(step4);
+
+ //Сообщаем финальный результат(всегда равен 5)
+ alert("Ответ равен 5");
