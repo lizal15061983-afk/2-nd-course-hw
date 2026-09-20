@@ -580,9 +580,9 @@ body {
     padding-bottom: 16px;
     margin-top: 0; /* Сбрасываем лишний мобильный маржин */
   }
-  .marquee__inner {
+  /*.marquee__inner {
     animation: none;
-  }
+  }*/
   .marquee__line {
     padding: 0;
     margin: 0;
