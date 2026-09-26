@@ -63,3 +63,37 @@ function startQuiz() {
   );
 }
 
+
+// Игра - Угадай число
+
+function guessNumberGame() {
+  const targetNumber = Math.floor(Math.random() * 100) + 1;
+  let userAnswer;
+
+  while (userAnswer !== targetNumber) {
+    userAnswer = prompt("Угадай число от 1 до 100:");
+
+    // Если нажали "Отмена"
+    if (userAnswer === null) {
+      alert("Игра окончена. Вы вышли.");
+      break;
+    }
+
+    // Превращаем в число и убираем пробелы (как в викторине!)
+    const parsedAnswer = Number(userAnswer.trim());
+
+    if (isNaN(parsedAnswer) || userAnswer.trim() === "") {
+      alert("Пожалуйста, введите корректное число.");
+      continue;
+    }
+
+    if (parsedAnswer < targetNumber) {
+      alert("Загаданное число больше.");
+    } else if (parsedAnswer > targetNumber) {
+      alert("Загаданное число меньше.");
+    } else {
+      alert("Поздравляем! Вы угадали число!");
+      break;
+    }
+  }
+}
