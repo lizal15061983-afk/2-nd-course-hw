@@ -14,7 +14,7 @@ for (let i = 0; i < arr.length; i++) {
 
 const arrTwo = [1, 5, 4, 10, 0, 3];
 
-for (let i = 0; i < arr.length; i++) {
+for (let i = 0; i < arrTwo.length; i++) {
   if (arrTwo[i] === 4) {
     console.log(i);
     break;
@@ -138,7 +138,7 @@ console.log(getNegatives(testNumbers)); // Выведет только отри�
 const randoms = [];
 
 for (let i = 0; i < 10; i++) {
-  const randomNum = Math.floor(Math.random() * 11); //  Math.floor округляет вниз до целого числа от 0 до 10 
+  const randomNum = Math.floor(Math.random() * 11); //  Math.floor округляет вниз до целого числа от 0 до 10
   randoms.push(randomNum);
 }
 
