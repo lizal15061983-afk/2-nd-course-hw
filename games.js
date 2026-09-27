@@ -106,7 +106,7 @@ function simpleArithmeticGame() {
   const randomOperator =
     operators[Math.floor(Math.random() * operators.length)];
 
-  // Генерируем два случайных числа от 1 до 10 
+  // Генерируем два случайных числа от 1 до 10
   let num1 = Math.floor(Math.random() * 10) + 1;
   let num2 = Math.floor(Math.random() * 10) + 1;
 
@@ -148,30 +148,30 @@ function simpleArithmeticGame() {
     alert(`Ошибка. Правильный ответ: ${correctAnswer}`);
   }
 }
- // Игра - Переверни текст
+// Игра - Переверни текст
 
- function reverseTextGame() {
-    // Сайт запрашивает у пользователя текст
-    const userText = prompt("Введите текст, который хотите перевернуть:");
+function reverseTextGame() {
+  // Сайт запрашивает у пользователя текст
+  const userText = prompt("Введите текст, который хотите перевернуть:");
 
-    // Если пользователь нажал "Отмена"
-    if (userText === null) {
-        alert("Игра окончена. Вы вышли.");
-        return;
-    }
+  // Если пользователь нажал "Отмена"
+  if (userText === null) {
+    alert("Игра окончена. Вы вышли.");
+    return;
+  }
 
-    // Проверяем, не ввели ли пустую строку
-    if (userText.trim() === "") {
-        alert("Вы ничего не ввели!");
-        return;
-    }
+  // Проверяем, не ввели ли пустую строку
+  if (userText.trim() === "") {
+    alert("Вы ничего не ввели!");
+    return;
+  }
 
-    // переворачивается введенный текст
-    const reversedText = userText
-        .split("")     // Разбиваем строку на массив букв
-        .reverse()     // Переворачиваем массив задом наперед
-        .join("");     // Склеиваем буквы обратно в одну строку
+  // переворачивается введенный текст
+  const reversedText = userText
+    .split("") // Разбиваем строку на массив букв
+    .reverse() // Переворачиваем массив задом наперед
+    .join(""); // Склеиваем буквы обратно в одну строку
 
-    // выводится перевернутый текст
-    alert(`Ваш перевернутый текст:\n${reversedText}`);
+  // выводится перевернутый текст
+  alert(`Ваш перевернутый текст:\n${reversedText}`);
 }
