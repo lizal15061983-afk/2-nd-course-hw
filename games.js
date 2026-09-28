@@ -63,3 +63,115 @@ function startQuiz() {
   );
 }
 
+// Игра - Угадай число
+
+function guessNumberGame() {
+  const targetNumber = Math.floor(Math.random() * 100) + 1;
+  let userAnswer;
+
+  while (userAnswer !== targetNumber) {
+    userAnswer = prompt("Угадай число от 1 до 100:");
+
+    // Если нажали "Отмена"
+    if (userAnswer === null) {
+      alert("Игра окончена. Вы вышли.");
+      break;
+    }
+
+    // Превращаем в число и убираем пробелы (как в викторине!)
+    const parsedAnswer = Number(userAnswer.trim());
+
+    if (isNaN(parsedAnswer) || userAnswer.trim() === "") {
+      alert("Пожалуйста, введите корректное число.");
+      continue;
+    }
+
+    if (parsedAnswer < targetNumber) {
+      alert("Загаданное число больше.");
+    } else if (parsedAnswer > targetNumber) {
+      alert("Загаданное число меньше.");
+    } else {
+      alert("Поздравляем! Вы угадали число!");
+      break;
+    }
+  }
+}
+
+// Игра - Простая арифметика
+
+function simpleArithmeticGame() {
+  //  Создаем массив с доступными математическими операциями
+  const operators = ["+", "-", "*", "/"];
+  // Выбираем случайный знак из массива с помощью Math.random
+  const randomOperator =
+    operators[Math.floor(Math.random() * operators.length)];
+
+  // Генерируем два случайных числа от 1 до 10
+  let num1 = Math.floor(Math.random() * 10) + 1;
+  let num2 = Math.floor(Math.random() * 10) + 1;
+
+  // Переменная для хранения правильного ответа компьютера
+  let correctAnswer;
+
+  // Вычисляем правильный ответ в зависимости от знака
+  switch (randomOperator) {
+    case "+":
+      correctAnswer = num1 + num2;
+      break;
+    case "-":
+      correctAnswer = num1 - num2;
+      break;
+    case "*":
+      correctAnswer = num1 * num2;
+      break;
+    case "/":
+      // Чтобы деление было красивым и без дробных хвостов:
+      num1 = num1 * num2;
+      correctAnswer = num1 / num2; //чтобы num1 нацело делилось на num2
+      break;
+  }
+
+  const userAnswer = prompt(
+    `Решите задачу:\n${num1} ${randomOperator} ${num2} = ?`,
+  );
+
+  // Если пользователь нажал "Отмена"
+  if (userAnswer === null) {
+    alert("Игра окончена. Вы вышли.");
+    return;
+  }
+
+  //  Проверяем ответ (удаляем пробелы и переводим в число)
+  if (userAnswer.trim() !== "" && Number(userAnswer.trim()) === correctAnswer) {
+    alert("Верно! Отличная работа! 🎉");
+  } else {
+    alert(`Ошибка. Правильный ответ: ${correctAnswer}`);
+  }
+}
+// Игра - Переверни текст
+
+function reverseTextGame() {
+  // Сайт запрашивает у пользователя текст
+  const userText = prompt("Введите текст, который хотите перевернуть:");
+
+  // Если пользователь нажал "Отмена"
+  if (userText === null) {
+    alert("Игра окончена. Вы вышли.");
+    return;
+  }
+
+  // Проверяем, не ввели ли пустую строку
+  if (userText.trim() === "") {
+    alert("Вы ничего не ввели!");
+    return;
+  }
+
+  // переворачивается введенный текст
+  const reversedText = userText
+    .split("") // Разбиваем строку на массив букв
+    .reverse() // Переворачиваем массив задом наперед
+    .join(""); // Склеиваем буквы обратно в одну строку
+
+  // выводится перевернутый текст
+  alert(`Ваш перевернутый текст:\n${reversedText}`);
+}
