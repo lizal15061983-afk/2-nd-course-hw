@@ -175,3 +175,51 @@ function reverseTextGame() {
   // выводится перевернутый текст
   alert(`Ваш перевернутый текст:\n${reversedText}`);
 }
+
+//  Игра - Камень, Ножницы, Бумага
+
+function rockPaperScissorsGame() {
+  let userChoice = prompt("Введите ваш выбор: камень, ножницы или бумага");
+  // Если позьзователь ввел отмена
+  if (userChoice === null) {
+    alert("Игра отменена.");
+  } else {
+    // Приводим к общему регистру
+    userChoice = userChoice.toLowerCase().trim();
+
+    // Сгенерируем  возможные ходы компьютера
+    // Создаем массив в котором содержится камень ножницы бумага
+    const possibleComputerMoves = ["камень", "ножницы", "бумага"];
+
+    // Проверяем, корректно ли ввел данные пользователь
+    if (!possibleComputerMoves.includes(userChoice)) {
+      alert(
+        "Ошибка! Пожалуйста, введите правильное слово: камень, ножницы или бумага.",
+      );
+    } else {
+      // Используем функцию для генерации случайного индекса
+      const randomIndex = Math.floor(
+        Math.random() * possibleComputerMoves.length,
+      );
+
+      // Выбираем вариант для компьютера из массива по случайному индексу
+      const computerChoice = possibleComputerMoves[randomIndex];
+
+      // Выводим выборы пользователя и компьютера на экран
+      alert(`Ваш ход: ${userChoice}\nХод компьютера: ${computerChoice}`);
+
+      // Определяем победителя и сообщаем результат игры
+      if (userChoice === computerChoice) {
+        alert("Результат игры: ничья.");
+      } else if (
+        (userChoice === "камень" && computerChoice === "ножницы") ||
+        (userChoice === "ножницы" && computerChoice === "бумага") ||
+        (userChoice === "бумага" && computerChoice === "камень")
+      ) {
+        alert("Результат игры: победа!");
+      } else {
+        alert("Результат игры: поражение.");
+      }
+    }
+  }
+}
