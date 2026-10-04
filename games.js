@@ -212,8 +212,9 @@ function changeBackgroundColor() {
     document.querySelector("main");
   if (mainWrapper) {
     mainWrapper.style.setProperty("background-color", randomColor, "important");
-  }
+  } 
 
+//Вокруг карточек -это,если нужен абсолютный цвеной фон
   const stubbornBlocks = document.querySelectorAll(".games-list, .games-about");
 
   // Перебираем их циклом и перекрашиваем каждый в тот же случайный цвет
