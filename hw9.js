@@ -1,11 +1,11 @@
 //Задание 1
-// Шаг 1. Находим элементы на странице с помощью querySelector
+//  Находим элементы на странице с помощью querySelector
 const title = document.querySelector(".title");
 const button = document.querySelector(".toggle-btn");
 
-// Шаг 2. Вешаем слушатель события клика на кнопку
+//  Вешаем слушатель события клика на кнопку
 button.addEventListener("click", () => {
-  // Шаг 3. Проверяем, скрыт ли заголовок сейчас
+  //  Проверяем, скрыт ли заголовок сейчас
   if (title.style.display === "none") {
     title.style.display = "block"; // Показываем текст обратно
     button.textContent = "Скрыть"; // Меняем текст на кнопке
