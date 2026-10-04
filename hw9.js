@@ -40,7 +40,7 @@ textButton.addEventListener("click", () => {
 //Задание 4
 
 // Шаг 1. Находим ВСЕ элементы с классом description
-const descriptions = document.querySelectorAll(".description");
+const descriptions = document.querySelectorAll(".product-card .description");
 
 // Шаг 2. Перебираем их циклом forEach и меняем текстовое содержимое каждого
 descriptions.forEach((element) => {
@@ -48,7 +48,7 @@ descriptions.forEach((element) => {
 });
 
 // Задание 5
-//Обернула  в div описание рараграфов в 4 и 5 задании (иначе применится к description и там и там)
+//Обернула  в div описание рараграфов в 4 и 5 задании (иначе применится к description в 4 задании)
 
 // Находим абзацы description.
 const taskDescriptions = document.querySelectorAll(".task-box .description");
@@ -56,4 +56,29 @@ const taskDescriptions = document.querySelectorAll(".task-box .description");
 // Перебираем их и меняем текст на «Новый текст»
 taskDescriptions.forEach((element) => {
   element.textContent = "Новый текст";
+});
+
+// Задание 6
+//  Создаем кнопку и добавляем новый абзац p при клике
+const btnEl = document.querySelector(".btn");
+btnEl.addEventListener("click", () => {
+  const newParagraph = document.createElement("p");
+  newParagraph.textContent = "Новый абзац";
+  document.body.appendChild(newParagraph);
+});
+
+//Задание 7
+
+//  Ищем кнопку удаления по её классу
+const deleteBtn = document.querySelector(".delete-btn");
+
+// Вешаем событие клика
+deleteBtn.addEventListener("click", () => {
+  //  Находим ПЕРВЫЙ абзац с классом .description, который лежит внутри .text-box
+  const firstDescription = document.querySelector(".text-box .description");
+
+  //  Если он найден — удаляем его
+  if (firstDescription) {
+    firstDescription.remove();
+  }
 });

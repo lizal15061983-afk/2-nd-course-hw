@@ -6,8 +6,10 @@
     <title>Основы работы DOM</title>
   </head>
   <body>
+    <!--Задание 1-->
     <h1 class="title">Домашняя работа 9</h1>
     <button class="toggle-btn">Скрыть</button>
+
     <!-- Задание 2 -->
     <p class="text-paragraph">
       Этот текст поменяет цвет при нажатии на кнопку ниже.
@@ -39,6 +41,25 @@
       <p class="footer-text">Еще один обычный текст без нужного класса</p>
     </div>
 
-    <script src="hw9.js"></script>
+    <!-- Задание 6 -->
+    <button class="btn">Добавить абзац</button>
+
+    <!--Задание 7-->
+    <div class="text-box">
+      <!-- Создаем несколько абзацев-->
+      <p class="description">
+        Это первый абзац с классом description (Именно его мы удалим!).
+      </p>
+      <p class="description">
+        Это второй абзац с классом description (Он останется после первого
+        клика).
+      </p>
+      <p>А это обычный абзац вообще без класса, его код не тронет.</p>
+    </div>
+
+    <!-- Создаем кнопку, которая будет запускать удаление -->
+    <button class="delete-btn">Удалить элемент</button>
+
+    <script src="hw9.js" defer></script>
   </body>
 </html>
