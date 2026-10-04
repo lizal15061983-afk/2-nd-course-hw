@@ -213,4 +213,11 @@ function changeBackgroundColor() {
   if (mainWrapper) {
     mainWrapper.style.setProperty("background-color", randomColor, "important");
   }
+
+  const stubbornBlocks = document.querySelectorAll(".games-list, .games-about");
+
+  // Перебираем их циклом и перекрашиваем каждый в тот же случайный цвет
+  stubbornBlocks.forEach((block) => {
+    block.style.setProperty("background-color", randomColor, "important");
+  });
 }
