@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn">Добавить товар</button>
+    <p class="text_info">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore, et.
+    </p>
+    <div class="content"></div>
+   <button class="btn-remove">Удалить текст</button>
+
+    <script>
+      const btnEl = document.querySelector("button");
+      const removeBtnEl = document.querySelector(".btn-remove");
+      const contentEl = document.querySelector(".content");
+
+      removeBtnEl.addEventListener("click", () => {
+       const text_infoEl = document.querySelector(".text_info");
+        text_infoEl.remove(); 
+    })
+
+      btnEl.addEventListener("click", () => {
+        const headingEl = document.createElement("h1"); // Создаем элемент h1
+        headingEl.textContent = "Заголовок"; // Устанавливаем текст элемента
+        headingEl.classList.add("heading"); // Добавляем класс heading к элементу
+        contentEl.appendChild(headingEl); // Добавляем элемент в body
+
+        const textEl = document.createElement("p"); // Создаем элемент p
+        textEl.textContent =
+          "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, laboriosam."; // Устанавливаем текст элемента
+        textEl.classList.add("text"); // Добавляем класс text к элементу
+        contentEl.appendChild(textEl); // Добавляем элемент в body
+      });
+    </script>
+  </body>
+</html>
